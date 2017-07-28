@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sokoban:Sokoban xmlns:sokoban="https://pvs.informatik.uni-ulm.de/sokoban">
+  <Author>Lukas Gromer</Author>
+  <LevelName>Minimales Testlevel</LevelName>
+  <Difficulty>EASY</Difficulty>
+  <LevelData width="5" height="3">#####
+#@$.#
+#####</LevelData>
+</sokoban:Sokoban>

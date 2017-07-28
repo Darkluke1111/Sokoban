@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="https://pvs.informatik.uni-ulm.de/sokoban"
+	xmlns="https://pvs.informatik.uni-ulm.de/sokoban" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="difficultyEnum">
+		<xs:restriction base="xs:string">
+			<!--Hier fehlt die Enumeration für die Schwierigkeit -->
+			<xs:enumeration value="EASY" />
+			<xs:enumeration value="MEDIUM" />
+			<xs:enumeration value="HARD" />
+			<xs:enumeration value="IMPOSSIBLE" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="sokobanString">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[#\.@\+$\*\n ]+" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+
+	<xs:element name="Sokoban">
+		<xs:complexType>
+			<xs:sequence>
+				<!--Hier fehlen die Element für Autor, Level Name und Schwierigkeit -->
+				<xs:element name="Author" minOccurs="1" maxOccurs="unbounded" type="xs:string" />
+				<xs:element name="LevelName" type="xs:string" />
+				<xs:element name="Difficulty" type="difficultyEnum" />
+
+				<xs:element name="LevelData">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="sokobanString">
+								<!--Hier fehlen die Attribute für Breite und Höhe eines Levels -->
+								<xs:attribute name="width" type="xs:int"/>
+								<xs:attribute name="height" type="xs:int"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

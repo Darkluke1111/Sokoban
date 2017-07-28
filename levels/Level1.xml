@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sokoban:Sokoban xmlns:sokoban="https://pvs.informatik.uni-ulm.de/sokoban">
+  <Author>Francois Marques</Author>
+  <LevelName>Level1</LevelName>
+  <Difficulty>HARD</Difficulty>
+  <LevelData width="9" height="10">   ####  
+####  ## 
+#   $  # 
+#  *** # 
+#  . . ##
+## * *  #
+ ##***  #
+  # $ ###
+  # @ #  
+  #####  </LevelData>
+</sokoban:Sokoban>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uulm.pvs.lg18.sokoban.view.MainWindowController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu text="Level">
+               <items>
+                  <MenuItem onAction="#onLoadLevel" text="_Load" />
+                  <MenuItem onAction="#onReloadLevel" text="_Reload" />
+               </items>
+          </Menu>
+          <Menu text="Edit" />
+            <Menu text="Highscore">
+              <items>
+                <MenuItem text="_Level Statistics" />
+                  <MenuItem onAction="#onShowPlayerHighscore" text="_Top Players" />
+              </items>
+            </Menu>
+          <Menu text="Help" />
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane fx:id="gameView" prefHeight="500.0" prefWidth="700.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
